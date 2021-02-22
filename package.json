@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "convert": "node convertToWOFF2.js"
+  },
+  "devDependencies": {
+    "ttf2woff2": "^4.0.1"
+  }
+}
