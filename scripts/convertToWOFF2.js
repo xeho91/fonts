@@ -1,35 +1,43 @@
 var path = require("path");
-var fs = require("fs");
+var fs = require("fs-extra");
 var ttf2woff2 = require("ttf2woff2");
+var yargs = require("yargs");
 
-function convertToWOFF2(fontInputPath, fontOutputPath) {
-	const input = fs.readFileSync(fontInputPath);
 
-	return fs.writeFileSync(fontOutputPath, ttf2woff2(input));
+async function convertToWOFF2(fontInputPath) {
+	console.log(`Converting "${fontInputPath}" to WOFF2 format...`);
+	const outputPath = path.join(
+		"build",
+		path.dirname(fontInputPath),
+		`${path.basename(fontInputPath, ".ttf")}.woff2`
+	);
+
+	const inputPath = path.join("source", fontInputPath);
+
+	await fs.outputFile(outputPath, ttf2woff2(fs.readFileSync(inputPath)));
+	console.log(`Done! Saved the font to "${outputPath}".`);
 }
 
-// Monospace
-convertToWOFF2(
-	path.resolve("monospace", "source", "FiraCode-VF.ttf"),
-	path.join("monospace", "Fira-Code.woff2")
-);
+module.exports = convertToWOFF2;
 
-// Sans-serif
-convertToWOFF2(
-	path.resolve("sans-serif", "source", "WorkSans[wght].ttf"),
-	path.join("sans-serif", "Work-Sans.woff2")
-);
-convertToWOFF2(
-	path.resolve("sans-serif", "source", "WorkSans-Italic[wght].ttf"),
-	path.join("sans-serif", "Work-Sans_italic.woff2")
-);
+// Allow using from CLI
+const fontPaths = yargs.argv._;
 
-// Serif
-convertToWOFF2(
-	path.resolve("serif", "source", "Fraunces[SOFT,WONK,opsz,wght].ttf"),
-	path.join("serif", "Fraunces.woff2")
-);
-convertToWOFF2(
-	path.resolve("serif", "source", "Fraunces-Italic[SOFT,WONK,opsz,wght].ttf"),
-	path.join("serif", "Fraunces_italic.woff2")
-);
+if (fontPaths.length > 0) {
+	for (const fontPath of fontPaths) {
+		convertToWOFF2(fontPath);
+	}
+} else {
+	var fontsJSON = require("../fonts.json");
+
+	for (const fontType in fontsJSON) {
+		fontsJSON[fontType].fontFiles.forEach((fileName) => {
+			const fontPath = path.join(
+				fontType,
+				path.basename(fileName, ".woff2")
+			);
+
+			convertToWOFF2(`${fontPath}.ttf`);
+		});
+	}
+}

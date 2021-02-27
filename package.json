@@ -1,8 +1,36 @@
 {
+  "name": "@xeho91/fonts",
+  "version": "1.0.0",
+  "description": "xeho91's fonts assets",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xeho91/fonts.git"
+  },
+  "keywords": [
+    "brand",
+    "assets",
+    "fonts"
+  ],
+  "author": "Mateusz Kadlubowski <xeho91@pm.me> https://xeho91.site/",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/xeho91/xeho91/issues"
+  },
+  "homepage": "https://github.com/xeho91/fonts#readme",
+  "main": "./fonts.json",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "./build",
+    "./fonts.css"
+  ],
   "scripts": {
-    "convert": "node convertToWOFF2.js"
+    "convert": "node scripts/convertToWOFF2.js"
   },
   "devDependencies": {
-    "ttf2woff2": "^4.0.1"
+    "fs-extra": "^9.1.0",
+    "ttf2woff2": "^4.0.1",
+    "yargs": "^16.2.0"
   }
 }
