@@ -3,7 +3,9 @@
 	font-weight: 1 999;
 	font-family: "Fira Code";
 	font-display: swap;
-	src: url("./build//monospace/FiraCode.woff2") format("woff2");
+	src: local("Fira Code"),
+		local("FiraCode"),
+		url("./build/monospace/FiraCode.woff2") format("woff2");
 }
 
 // Sans-serif
@@ -11,14 +13,18 @@
 	font-weight: 1 999;
 	font-family: "Work Sans";
 	font-display: swap;
-	src: url("./build//sans-serif/WorkSans.woff2") format("woff2");
+	src: local("Work Sans"),
+		local("WorkSans"),
+		url("./build/sans-serif/WorkSans.woff2") format("woff2");
 }
 @font-face {
 	font-weight: 1 999;
 	font-family: "Work Sans";
 	font-style: italic;
 	font-display: swap;
-	src: url("./build//sans-serif/WorkSans.italic.woff2") format("woff2");
+	src: local("Work Sans"),
+		local("WorkSans"),
+		url("./build/sans-serif/WorkSans.italic.woff2") format("woff2");
 }
 
 // Serif
@@ -26,14 +32,16 @@
 	font-weight: 1 999;
 	font-family: "Fraunces";
 	font-display: swap;
-	src: url("./build//serif/Fraunces.woff2") format("woff2");
+	src: local("Fraunces"),
+		url("./build/serif/Fraunces.woff2") format("woff2");
 }
 @font-face {
 	font-weight: 1 999;
 	font-family: "Fraunces";
 	font-style: italic;
 	font-display: swap;
-	src: url("./build//serif/Fraunces.italic.woff2") format("woff2");
+	src: local("Fraunces"),
+		url("./build/serif/Fraunces.italic.woff2") format("woff2");
 }
 
 :root {
