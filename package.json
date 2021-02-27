@@ -17,14 +17,15 @@
     "url": "https://github.com/xeho91/xeho91/issues"
   },
   "homepage": "https://github.com/xeho91/fonts#readme",
-  "main": "./fonts.json",
+  "files": [
+    "build",
+    "fonts.json"
+  ],
+  "style": "fonts.css",
+  "main": "fonts.css",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "files": [
-    "./build",
-    "./fonts.css"
-  ],
   "scripts": {
     "convert": "node scripts/convertToWOFF2.js"
   },
