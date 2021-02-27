@@ -1,0 +1,14 @@
+{
+  "monospace": {
+    "name": "Fira Code",
+    "fontFiles": ["FiraCode.woff2"]
+  },
+  "sans-serif": {
+    "name": "Work Sans",
+    "fontFiles": ["WorkSans.woff2", "WorkSans.italic.woff2"]
+  },
+  "serif": {
+    "name": "Fraunces",
+    "fontFiles": ["Fraunces.woff2", "Fraunces.italic.woff2"]
+  }
+}

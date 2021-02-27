@@ -1,40 +1,43 @@
-@font-face {
-	font-weight: 1 999;
-	font-family: "Fraunces";
-	font-display: swap;
-	src: url("./serif/Fraunces.woff2") format("woff2");
-}
-@font-face {
-	font-weight: 1 999;
-	font-family: "Fraunces";
-	font-style: italic;
-	font-display: swap;
-	src: url("./serif/Fraunces_italic.woff2") format("woff2");
-}
-
-@font-face {
-	font-weight: 1 999;
-	font-family: "Work Sans";
-	font-display: swap;
-	src: url("./sans-serif/Work-Sans.woff2") format("woff2");
-}
-@font-face {
-	font-weight: 1 999;
-	font-family: "Work Sans";
-	font-style: italic;
-	font-display: swap;
-	src: url("./sans-serif/Work-Sans_italic.woff2") format("woff2");
-}
-
+// Monospace
 @font-face {
 	font-weight: 1 999;
 	font-family: "Fira Code";
 	font-display: swap;
-	src: url("./monospace/Fira-Code.woff2") format("woff2");
+	src: url("./build//monospace/FiraCode.woff2") format("woff2");
+}
+
+// Sans-serif
+@font-face {
+	font-weight: 1 999;
+	font-family: "Work Sans";
+	font-display: swap;
+	src: url("./build//sans-serif/WorkSans.woff2") format("woff2");
+}
+@font-face {
+	font-weight: 1 999;
+	font-family: "Work Sans";
+	font-style: italic;
+	font-display: swap;
+	src: url("./build//sans-serif/WorkSans.italic.woff2") format("woff2");
+}
+
+// Serif
+@font-face {
+	font-weight: 1 999;
+	font-family: "Fraunces";
+	font-display: swap;
+	src: url("./build//serif/Fraunces.woff2") format("woff2");
+}
+@font-face {
+	font-weight: 1 999;
+	font-family: "Fraunces";
+	font-style: italic;
+	font-display: swap;
+	src: url("./build//serif/Fraunces.italic.woff2") format("woff2");
 }
 
 :root {
-	--font_serif: "Fraunces", serif;
-	--font_sans-serif: "Work Sans", sans-serif;
 	--font_monospace: "Fira Code", monospace;
+	--font_sans-serif: "Work Sans", sans-serif;
+	--font_serif: "Fraunces", serif;
 }
