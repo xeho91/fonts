@@ -3,11 +3,12 @@ var fs = require("fs-extra");
 var ttf2woff2 = require("ttf2woff2");
 var yargs = require("yargs");
 
+const DEST_PATH = path.resolve("dist/fonts");
 
 async function convertToWOFF2(fontInputPath) {
 	console.log(`Converting "${fontInputPath}" to WOFF2 format...`);
 	const outputPath = path.join(
-		"build",
+		DEST_PATH,
 		path.dirname(fontInputPath),
 		`${path.basename(fontInputPath, ".ttf")}.woff2`
 	);
@@ -28,7 +29,7 @@ if (fontPaths.length > 0) {
 		convertToWOFF2(fontPath);
 	}
 } else {
-	var fontsJSON = require("../fonts.json");
+	var fontsJSON = require("../dist/fonts.json");
 
 	for (const fontType in fontsJSON) {
 		fontsJSON[fontType].fontFiles.forEach((fileName) => {

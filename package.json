@@ -1,6 +1,6 @@
 {
   "name": "@xeho91/fonts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "xeho91's fonts assets",
   "repository": {
     "type": "git",
@@ -16,13 +16,12 @@
   "bugs": {
     "url": "https://github.com/xeho91/xeho91/issues"
   },
-  "homepage": "https://github.com/xeho91/fonts#readme",
+  "homepage": "https://github.com/xeho91/xeho91#readme",
   "files": [
-    "build",
-    "fonts.json"
+    "dist"
   ],
-  "style": "fonts.css",
-  "main": "fonts.css",
+  "style": "dist/fonts.css",
+  "main": "dist/fonts.css",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },

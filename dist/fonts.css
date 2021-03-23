@@ -1,0 +1,36 @@
+/* Monospace */
+@font-face {
+	font-family: "Fira Code";
+	font-style: normal;
+	src: url("/fonts/monospace/FiraCode.woff2") format("woff2");
+	font-display: swap;
+}
+
+/* Sans-serif */
+@font-face {
+	font-family: "Work Sans";
+	font-style: normal;
+	src: url("/fonts/sans-serif/WorkSans.woff2") format("woff2");
+	font-display: swap;
+}
+@font-face {
+	font-family: "Work Sans";
+	font-style: italic;
+	src: url("/fonts/sans-serif/WorkSans.italic.woff2") format("woff2");
+	font-display: swap;
+}
+
+/* Serif */
+@font-face {
+	font-family: "Fraunces";
+	font-style: normal;
+	src: url("/fonts/serif/Fraunces.woff2") format("woff2");
+	font-display: swap;
+}
+@font-face {
+	font-family: "Fraunces";
+	font-style: italic;
+	src: url("/fonts/serif/Fraunces.italic.woff2") format("woff2");
+	font-display: swap;
+}
+
